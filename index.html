@@ -25,7 +25,7 @@
   </head>
   <body ng-controller="AppCtrl">
 
-    <div id="container" class="turn-{{turn()}}">
+    <div id="container" class="turn-{{game.turn()}}" ng-if="!!game">
         <div class="black">
             <h1>BLACK TURN</h1>
         </div>
@@ -34,7 +34,7 @@
             <h1>WHITE TURN</h1>
         </div>
 
-        <chessboard fen="fen"></chessboard>
+        <chessboard game="game"></chessboard>
     </div>
 
     <a ng-click="clear()" href="#">Clear</a>
