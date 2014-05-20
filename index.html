@@ -1,0 +1,43 @@
+<html ng-app="MyApp">
+  <head>
+    <title>Test</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/chessboard-0.3.0.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>    
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://cdn.firebase.com/js/client/1.0.15/firebase.js"></script>
+    <!-- AngularFire Library -->
+    <script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
+    <!-- Chessboard -->
+    <script src="js/chessboard-0.3.0.min.js"></script>
+    <!-- Chess logic -->
+    <script src="js/chess.min.js"></script>
+
+    <!-- Actual code -->
+    <script src="js/main.js"></script>
+
+  </head>
+  <body ng-controller="AppCtrl">
+
+    <div id="container" class="turn-{{turn()}}">
+        <div class="black">
+            <h1>BLACK TURN</h1>
+        </div>
+
+        <div class="white">
+            <h1>WHITE TURN</h1>
+        </div>
+
+        <chessboard fen="fen"></chessboard>
+    </div>
+
+    <a ng-click="clear()" href="#">Clear</a>
+
+  </body>
+</html>
